@@ -17,9 +17,8 @@ namespace TestSolution.Tests
         [Test]
         public void SimpleParsingExampleTest()
         {
-            Assert.AreEqual(
-                SimpleCode.Result()["a"],
-                1
+            Assert.That(
+                SimpleCode.Result()["a"] == 1
             );
         }
 
@@ -27,7 +26,7 @@ namespace TestSolution.Tests
         public void HardParsingExampleTest()
         {
             var result = HardCode.Result();
-            Assert.True(
+            Assert.That(
                 result["a"] == 6
                 &&
                 result["b"] == 2

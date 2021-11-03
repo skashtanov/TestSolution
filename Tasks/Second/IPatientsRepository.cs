@@ -8,6 +8,5 @@ namespace TestSolution.Tasks.Second
         IEnumerable<Patient> FindBySurname(string surname);
         IEnumerable<Patient> Critical();
         IEnumerable<Patient> YoungerThan(int age);
-        
     }
 }

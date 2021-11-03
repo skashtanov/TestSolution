@@ -13,7 +13,8 @@ namespace TestSolution.Tasks.Second
 
         public PatientsRepository(params Patient[] patients) : 
             this(patients.ToList())
-        {  }
+        {  
+        }
 
         public IEnumerable<Patient> FindByName(string name)
         {
@@ -24,6 +25,7 @@ namespace TestSolution.Tasks.Second
         {
             return _patients.Where(patient => patient.Surname == surname);
         }
+
         public IEnumerable<Patient> Critical()
         {
             return _patients.Where(patient => patient.Status == "critical");
@@ -31,7 +33,7 @@ namespace TestSolution.Tasks.Second
 
         public IEnumerable<Patient> YoungerThan(int age)
         {
-            if (age <= 0)
+            if (age <= 0) 
             {
                 throw new ArgumentException($"{nameof(age)} must be positive");
             }

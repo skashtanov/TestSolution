@@ -10,7 +10,6 @@ namespace TestSolution
         {
             var cafe = new AsyncCafe();
             await cafe.MakeBreakfast();
-            Console.WriteLine("FFFFFF");
             Console.ReadKey();
         }
     }
